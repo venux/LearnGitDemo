@@ -90,3 +90,34 @@ git push origin $branchname
 - 发布一个版本时，我们通常先在版本库中打一个标签（tag），这样，就唯一确定了打标签时刻的版本。将来无论什么时候，取某个标签的版本，就是把那个打标签的时刻的历史版本取出来。所以，标签也是版本库的一个快照。
 - Git的标签虽然是版本库的快照，但其实它就是指向某个commit的指针（跟分支很像对不对？但是分支可以移动，标签不能移动），所以，创建和删除标签都是瞬间完成的。
 - 增强版本识别，不用通过版本ID判断版本。
+# 26.创建标签
+git tag $tagname [$commitid]
+- $commitid：指定给对应的提交记录打上标签，如无则给最新提交的记录加标签。
+# 27.查看标签
+git tag [$tagname]
+- $tagname：查看指定标签，如无则查看所有标签。
+- `-a`：指定标签名，如`git tag -a v1.0`；
+- `-m`：指定说明，如`git tag -a v1.0 -m "这是第一个发布版本"`；
+# 28.推送标签
+git push origin $tagname
+# 29.推送所有标签
+git push origin --tags
+# 30.删除标签
+git tag -d $tagname
+# 31.删除远程标签
+git push origin :refs/tags/$tagname
+- 要求先删除本地标签
+# 32.忽略文件
+- .gitignore文件[github](https://github.com/github/gitignore)
+- 原则是：
+    - 忽略操作系统自动生成的文件，比如缩略图等；
+    - 忽略编译生成的中间文件、可执行文件等，也就是如果一个文件是通过另一个文件自动生成的，那自动生成的文件就没必要放进版本库，比如Java编译产生的.class文件；
+    - 忽略你自己的带有敏感信息的配置文件，比如存放口令的配置文件。
+# 33.查看忽略文件
+git check-ignore
+- `-v`：查看忽略规则的详细行数
+# 34.命令别名
+git config --global alias.$shortname $name
+`git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"`
+# 35.全局配置文件位置
+`C:\Users\$username\.gitconfig`
