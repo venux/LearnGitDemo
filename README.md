@@ -10,7 +10,10 @@ git status
 # 5.对比修改记录
 git diff
 # 6.查看提交日志
-git log [--pretty=oneline]
+git log 
+- `--pretty=oneline`:单行显示
+- `--graph`：图像显示
+- `--abbrev-commit`：缩写CommitID
 # 7.版本回退
 git reset --hard
 - `HEAD`表示当前版本
@@ -51,8 +54,7 @@ git merge $branchname
 - 合并结果中的`Fast-forward`表示快进模式，即直接将当前分支的指针指向指定分支的最新提交位置，故非常快。
 # 19.删除分支
 git branch -d $branchname
-<<<<<<< HEAD
-冲突测试2
-=======
-冲突测试
->>>>>>> branch1
+# 20.解决冲突
+1. 多分支同时修改同一个文件后add并commit；
+2. merge分支时提示冲突；
+3. 修改冲突文件后再次add并commit即可。
