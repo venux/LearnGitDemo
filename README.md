@@ -23,4 +23,5 @@ git reset --hard
 # 8.查看命令历史
 git reflog
 # 9.撤销修改
-git checkout -- $filename
+-  未添加到暂存区：git checkout -- $filename
+-  已添加到暂存区：git reset HEAD $filename
