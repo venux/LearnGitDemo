@@ -45,3 +45,9 @@ git checkout -b $branchname
 - `-b`：表示创建并切换，相当于创建`git branch $branchname`和切换`git checkout $branchname`两个命令。
 # 17.查看分支
 git branch
+# 18.合并分支
+git merge $branchname
+- 合并指定分支到当前分支
+- 合并结果中的`Fast-forward`表示快进模式，即直接将当前分支的指针指向指定分支的最新提交位置，故非常快。
+# 19.删除分支
+git branch -d $branchname
