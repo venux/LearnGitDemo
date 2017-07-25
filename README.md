@@ -51,3 +51,4 @@ git merge $branchname
 - 合并结果中的`Fast-forward`表示快进模式，即直接将当前分支的指针指向指定分支的最新提交位置，故非常快。
 # 19.删除分支
 git branch -d $branchname
+冲突测试
