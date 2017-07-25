@@ -27,3 +27,9 @@ git reflog
 -  已添加到暂存区：git reset HEAD $filename
 # 10.删除文件
 git rm $filename
+# 11.添加远程库
+git remote add origin $giturl
+- 远程库默认名为`origin`
+# 12.推送当前分支master到远程库origin
+git push -u origin master
+- `-u`：由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
