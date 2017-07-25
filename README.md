@@ -25,3 +25,5 @@ git reflog
 # 9.撤销修改
 -  未添加到暂存区：git checkout -- $filename
 -  已添加到暂存区：git reset HEAD $filename
+# 10.删除文件
+git rm $filename
