@@ -33,3 +33,9 @@ git remote add origin $giturl
 # 12.推送当前分支master到远程库origin
 git push -u origin master
 - `-u`：由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
+- 第二次后就可去掉`-u`参数直接推送。
+# 13.克隆
+git clone $giturl
+# 14.创建分支
+git checkout -b $branchname
+- `-b`：表示创建并切换，相当于`git branch $branchname`和`git checkout $branchname`
