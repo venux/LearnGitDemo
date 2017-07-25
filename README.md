@@ -37,5 +37,9 @@ git push -u origin master
 # 13.克隆
 git clone $giturl
 # 14.创建分支
+git branch $branchname
+# 15.切换分支
+git checkout $branchname
+# 16.创建并切换分支
 git checkout -b $branchname
-- `-b`：表示创建并切换，相当于`git branch $branchname`和`git checkout $branchname`
+- `-b`：表示创建并切换，相当于创建`git branch $branchname`和切换`git checkout $branchname`两个命令。
