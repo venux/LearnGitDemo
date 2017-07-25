@@ -43,3 +43,5 @@ git checkout $branchname
 # 16.创建并切换分支
 git checkout -b $branchname
 - `-b`：表示创建并切换，相当于创建`git branch $branchname`和切换`git checkout $branchname`两个命令。
+# 17.查看分支
+git branch
