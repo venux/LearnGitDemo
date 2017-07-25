@@ -4,3 +4,6 @@ git init
 git add $filename
 # 3.提交到仓库
 git commit -m "$comment"
+# 4.查看状态
+git status
+#
