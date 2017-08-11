@@ -121,3 +121,6 @@ git config --global alias.$shortname $name
 `git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"`
 # 35.全局配置文件位置
 `C:\Users\$username\.gitconfig`
+# 36.拉取
+git pull origin master
+- 若提示refusing to merge unrelated histories则需添加参数`--allow-unrelated-histories`
