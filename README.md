@@ -122,8 +122,8 @@ git config --global alias.$shortname $name
 # 35.全局配置文件位置
 
 - `C:\Users\$username\.gitconfig`
-- git config --global user.name
-- git config --global user.email handsomerocco@gmail.com  
+- git config --global user.name `value`
+- git config --global user.email `value` 
 
 # 36.拉取
 
